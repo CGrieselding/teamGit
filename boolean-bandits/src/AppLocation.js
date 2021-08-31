@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import APIweather from './components/Weather/API weather';
 import Nasa from './components/NASA';
+import EventsApp from './components/TicketMaster/TicketMaster';
 
 const AppLocation=() => {
   const [lat, setLat] = useState('');
@@ -12,7 +13,7 @@ const AppLocation=() => {
     if (!navigator.geolocation) {
       setStatus('Geolocation is not supported by your browser');
     } else {
-      setStatus('Locating...');
+      setStatus('Checking...');
       navigator.geolocation.getCurrentPosition((position) => {
         setStatus(null);
         setLat(position.coords.latitude);
@@ -23,83 +24,15 @@ const AppLocation=() => {
     }
   }
 
-  
   return (
     <div className="App">
-<<<<<<< HEAD:boolean-bandits/src/components/Location/AppLocation.js
-      <h1 className="sectionTitle">Discover Your Exact Location...</h1>
-      <button onClick={getLocation} className="myButton">Get Location</button>
-=======
-      <h1>Display</h1>
-      <button onClick={GetLocation}>Get Location</button>
->>>>>>> 01ead46f499e03fd3e8480e38737d49df0d84a45:boolean-bandits/src/AppLocation.js
+      <button onClick={GetLocation} className="myButton">Check Temperature</button>
       <p>{status}</p>
       <APIweather lat={lat} lng={lng}/>
       <Nasa lat={lat} lng={lng}/>
+      <EventsApp />
     </div>
   );
 }
 
 export default AppLocation;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
