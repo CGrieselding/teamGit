@@ -1,70 +1,20 @@
-import React, {useState, useEffect} from 'react';
-import AppLocation from './components/Location/AppLocation';
+import React, { useState, useEffect } from "react";
+import { Button } from "reactstrap";
+import "bootstrap/dist/css/bootstrap.css";
+import "./App.css";
 // import GetLocation from './components/Location/GeoLocation';
-import { Button } from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.css';
-import './App.css';
-
-// import AppLocation from './AppLocation';
-import Nasa from './components/NASA';
-import APIweather from './components/Weather/API weather';
-import AppLocation from './AppLocation';
+import AppLocation from "./AppLocation";
 
 function App() {
-  
-    // const [lat, setLat] = useState('');
-    // const [lng, setLng] = useState('');
-    // const [status, setStatus] = useState(null);
-    
-    
-    // const GetLocation = () => {
-    //   if (!navigator.geolocation) {
-    //     setStatus('Geolocation is not supported by your browser');
-    //   } else {
-    //     setStatus('Locating...');
-    //     navigator.geolocation.getCurrentPosition((position) => {
-    //       setStatus(null);
-    //       setLat(position.coords.latitude);
-    //       setLng(position.coords.longitude);
-    //     }, () => {
-    //       setStatus('Unable to retrieve your location');
-    //     });
-    //   }
-    // }
-
-      return (
-      <div className="App">
-      <h1>Boolean Bandits!</h1>
-        <AppLocation/>
-      </div>
-    
-    );
-  
-}
-import Nasa from './components/NASA';
-import APIweather from './components/Weather/API weather';
-
-function App() {
-	const lon = -111.0937
-	const lat = 39.3210
   return (
     <div className="App">
-      <h1>Boolean Bandits!</h1>
-			<Nasa lon={ lon } lat={ lat }/>
-      <AppLocation/>
-      <APIweather />
-      {/* <TicketMaster /> */}
-      </div>
-       
-    );
-  }
+      <h1 className="mainTitle">Boolean Bandits</h1>
+      <h6>⤪ Robbing API's One At A Time ⤨</h6>
+      <hr />
+      <br />
+      <AppLocation />
+    </div>
+  );
+}
 
 export default App;
-
-
-
-
-
-
-
-
