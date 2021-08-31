@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import APIweather from './components/Weather/API weather';
 
 const AppLocation=() => {
-  const [lat, setLat] = useState(null);
-  const [lng, setLng] = useState(null);
+  const [lat, setLat] = useState('');
+  const [lng, setLng] = useState('');
   const [status, setStatus] = useState(null);
   
   
@@ -20,14 +21,14 @@ const AppLocation=() => {
       });
     }
   }
+
   
   return (
     <div className="App">
       <button onClick={GetLocation}>Get Location</button>
       <h1>Coordinates</h1>
       <p>{status}</p>
-      <p>{lat}</p>
-      <p>{lng}</p>
+      <APIweather lat={lat} lng={lng}/>
     </div>
   );
 }
