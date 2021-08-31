@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import APIweather from './components/Weather/API weather';
+import Nasa from './components/NASA';
 
 const AppLocation=() => {
   const [lat, setLat] = useState('');
@@ -25,10 +26,11 @@ const AppLocation=() => {
   
   return (
     <div className="App">
+      <h1>Display</h1>
       <button onClick={GetLocation}>Get Location</button>
-      <h1>Coordinates</h1>
       <p>{status}</p>
       <APIweather lat={lat} lng={lng}/>
+      <Nasa lat={lat} lng={lng}/>
     </div>
   );
 }

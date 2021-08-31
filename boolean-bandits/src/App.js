@@ -33,7 +33,6 @@ function App() {
       <div className="App">
       <h1>Boolean Bandits!</h1>
         <AppLocation/>
-      {/* <Nasa/> */}
       </div>
     
     );

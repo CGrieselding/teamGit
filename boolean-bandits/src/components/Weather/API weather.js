@@ -21,7 +21,6 @@ const APIweather = (props) => {
   .then(data => {
     console.log(data.list[0].main.temp)
     setWeather(data.list[0].main.temp)
-    console.log(baseURL)
       
     })
     .catch(err => console.log(err));
