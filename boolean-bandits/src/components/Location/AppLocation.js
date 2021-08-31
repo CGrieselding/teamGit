@@ -22,8 +22,8 @@ import React, { useState } from 'react';
 
   return (
     <div className="App">
-      <button onClick={getLocation}>Get Location</button>
-      <h1>Coordinates</h1>
+      <h1 className="sectionTitle">Discover Your Exact Location...</h1>
+      <button onClick={getLocation} className="myButton">Get Location</button>
       <p>{status}</p>
       {lat && <p>Latitude: {lat}</p>}
       {lng && <p>Longitude: {lng}</p>}
