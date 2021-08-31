@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import APIweather from './components/Weather/API weather';
+import Nasa from './components/NASA';
 
-  const AppLocation = () => {
-  const [lat, setLat] = useState(null);
-  const [lng, setLng] = useState(null);
+const AppLocation=() => {
+  const [lat, setLat] = useState('');
+  const [lng, setLng] = useState('');
   const [status, setStatus] = useState(null);
-
-  const getLocation = () => {
+  
+  
+  const GetLocation = () => {
     if (!navigator.geolocation) {
       setStatus('Geolocation is not supported by your browser');
     } else {
@@ -20,13 +23,14 @@ import React, { useState } from 'react';
     }
   }
 
+  
   return (
     <div className="App">
-      <button onClick={getLocation}>Get Location</button>
-      <h1>Coordinates</h1>
+      <h1>Display</h1>
+      <button onClick={GetLocation}>Get Location</button>
       <p>{status}</p>
-      {lat && <p>Latitude: {lat}</p>}
-      {lng && <p>Longitude: {lng}</p>}
+      <APIweather lat={lat} lng={lng}/>
+      <Nasa lat={lat} lng={lng}/>
     </div>
   );
 }
