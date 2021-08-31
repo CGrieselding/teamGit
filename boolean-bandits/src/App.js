@@ -9,8 +9,6 @@ import AppLocation from './components/Location/AppLocation';
 
 
 function App() {
-  
- 
 
   
   return (
