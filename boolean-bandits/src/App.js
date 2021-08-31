@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 // import GetLocation from './components/Location/GeoLocation';
 import AppLocation from './components/Location/AppLocation';
+import EventsApp from './components/TicketMaster/TicketMaster';
 
 
 
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
     <h1>Boolean Bandits!</h1>
     <AppLocation/>
+    <EventsApp />
     <div>
     
 
